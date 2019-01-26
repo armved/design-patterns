@@ -1,0 +1,24 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "Implementations of popular design patterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armved/moview-front.git"
+  },
+  "keywords": [
+    "typescript",
+    "design",
+    "patterns"
+  ],
+  "author": "armved",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/armved/moview-front/issues"
+  },
+  "homepage": "https://github.com/armved/moview-front#readme"
+}
