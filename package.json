@@ -4,6 +4,7 @@
   "description": "Implementations of popular design patterns",
   "main": "index.js",
   "scripts": {
+    "factory-method": "ts-node ./src/creational/factory-method/demo.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
