@@ -7,6 +7,11 @@
       "type": "npm",
       "script": "factory-method",
       "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "abstract-factory",
+      "problemMatcher": []
     }
   ]
 }
