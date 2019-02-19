@@ -6,6 +6,7 @@
   "scripts": {
     "factory-method": "npx ts-node ./src/creational/factory-method/demo.ts",
     "abstract-factory": "npx ts-node ./src/creational/abstract-factory/demo.ts",
+    "builder": "npx ts-node ./src/creational/builder/demo.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

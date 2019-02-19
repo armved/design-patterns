@@ -12,6 +12,11 @@
       "type": "npm",
       "script": "abstract-factory",
       "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "builder",
+      "problemMatcher": []
     }
   ]
 }
