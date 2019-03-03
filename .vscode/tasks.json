@@ -27,6 +27,11 @@
       "type": "npm",
       "script": "singleton",
       "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "adapter",
+      "problemMatcher": []
     }
   ]
 }
