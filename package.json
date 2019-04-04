@@ -10,6 +10,7 @@
     "prototype": "npx ts-node ./src/creational/prototype/demo.ts",
     "singleton": "npx ts-node ./src/creational/singleton/demo.ts",
     "adapter": "npx ts-node ./src/structural/adapter/demo.ts",
+    "bridge": "npx ts-node ./src/structural/bridge/demo.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

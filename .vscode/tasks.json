@@ -32,6 +32,11 @@
       "type": "npm",
       "script": "adapter",
       "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "bridge",
+      "problemMatcher": []
     }
   ]
 }
