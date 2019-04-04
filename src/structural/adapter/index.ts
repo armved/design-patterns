@@ -22,12 +22,11 @@ interface Adapter<InputType, OutputType> {
 
 export class ModelAdapter implements Adapter<APIModel, UIModel> {
   public adapt(data: APIModel): UIModel {
-    const uiModelInput: UIModel = {
+    return new UIModel({
       label: data.name,
       value: data.value,
       date: new Date(data.timestamp * 1000),
-    };
-    return new UIModel(uiModelInput);
+    });
   }
 }
 
@@ -35,6 +34,7 @@ export class APIService {
   constructor(private modelAdapter: ModelAdapter) {}
 
   public get(): UIModel {
+    // data returned from server
     const apiData = {
       name: 'Element',
       value: 20,
@@ -49,6 +49,7 @@ export class Application {
   constructor(private apiService: APIService) {}
 
   public getModel(): UIModel {
+    // API returned data in APIModel format but from service we have got data in UIModel format
     return this.apiService.get();
   }
 }

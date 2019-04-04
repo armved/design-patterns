@@ -28,6 +28,10 @@ export class FormGroup<T> extends AbstractControl<T> {
   }
 
   public clone(): FormGroup<T> {
-    return new FormGroup(this.value);
+    const value = {
+      ...this.value,
+      isFormGroup: true,
+    };
+    return new FormGroup(value);
   }
 }

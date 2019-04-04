@@ -1,5 +1,17 @@
-interface ITransport {
+interface Transport {
   deliver(): void;
+}
+
+class Car implements Transport {
+  public deliver(): void {
+    console.log('Delivering on car');
+  }
+}
+
+class Ship implements Transport {
+  public deliver(): void {
+    console.log('Delivering on ship');
+  }
 }
 
 abstract class Logistics {
@@ -9,29 +21,17 @@ abstract class Logistics {
     transport.deliver();
   }
 
-  public abstract createTransport(): ITransport;
-}
-
-class Car implements ITransport {
-  public deliver(): void {
-    console.log('Delivering on car');
-  }
-}
-
-class Ship implements ITransport {
-  public deliver(): void {
-    console.log('Delivering on ship');
-  }
+  public abstract createTransport(): Transport;
 }
 
 export class CarLogistics extends Logistics {
-  public createTransport(): Car {
+  public createTransport(): Transport {
     return new Car();
   }
 }
 
 export class ShipLogistics extends Logistics {
-  public createTransport(): Ship {
+  public createTransport(): Transport {
     return new Ship();
   }
 }

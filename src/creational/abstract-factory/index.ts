@@ -1,14 +1,9 @@
-interface Knight {
-  hit(): void;
-}
-
 interface Archer {
   shoot(): void;
 }
 
-export interface UnitsFactory {
-  createArcher(): Archer;
-  createKnight(): Knight;
+interface Knight {
+  hit(): void;
 }
 
 class ArmenianArcher implements Archer {
@@ -35,22 +30,27 @@ class RomanianKnight implements Knight {
   }
 }
 
+export interface UnitsFactory {
+  createArcher(): Archer;
+  createKnight(): Knight;
+}
+
 export class ArmenianUnitsFactory implements UnitsFactory {
-  public createArcher(): ArmenianArcher {
+  public createArcher(): Archer {
     return new ArmenianArcher();
   }
 
-  public createKnight(): ArmenianKnight {
+  public createKnight(): Knight {
     return new ArmenianKnight();
   }
 }
 
 export class RomanianUnitsFactory implements UnitsFactory {
-  public createArcher(): RomanianArcher {
+  public createArcher(): Archer {
     return new RomanianArcher();
   }
 
-  public createKnight(): RomanianKnight {
+  public createKnight(): Knight {
     return new RomanianKnight();
   }
 }

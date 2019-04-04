@@ -1,6 +1,6 @@
 export class Database {
-  private static instance: Database;
   public static connections: number = 0;
+  private static instance: Database;
 
   constructor() {
     Database.connections = Database.connections + 1;

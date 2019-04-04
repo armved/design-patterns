@@ -1,11 +1,21 @@
 import { UnitsFactory, ArmenianUnitsFactory, RomanianUnitsFactory } from '.';
 
-const unitsFactories: UnitsFactory[] = [
-  new ArmenianUnitsFactory(),
-  new RomanianUnitsFactory(),
+const players: {
+  name: string;
+  unitsFactory: UnitsFactory;
+}[] = [
+  {
+    name: 'Avetik',
+    unitsFactory: new ArmenianUnitsFactory(),
+  },
+  {
+    name: 'Kirill',
+    unitsFactory: new RomanianUnitsFactory(),
+  },
 ];
 
-unitsFactories.forEach((unitsFactory: UnitsFactory) => {
+players.forEach(({ unitsFactory }) => {
+  // Do some war for each of players
   const archer = unitsFactory.createArcher();
   archer.shoot();
 
